@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./index.css">
+    <title>WHERES THAT FROM</title>
+</head>
+<body>
+    <header><h1 class="title">Where's that from?</h1>
+        <nav class="topnav">
+            <a href='index.html'>home</a>
+            <a class="random_quotebtn" href="./randomQuote.html">random quotes</a>
+          
+            <form id="myForm">
+                <input type="text" name='search' class="search" placeholder="movie title"><button type='submit'class="submit-btn">find quote</button>
+            </form>
+        </nav>
+    </header>
+    <main>
+        <section class="qotd-box">
+            <p class="qotd">"QUOTE HERE"
+
+            </p>
+    
+
+        </section>
+        
+        <section id="input">
+        <input type='text' class="qotd-answer"><button class="qotd-btn" type="submit">check answer</button>
+        </section>
+
+            <section id="displaysection"></section>
+    </main>
+    <footer></footer>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./index.js"></script>
+    <!-- <script>
+        function submitForm() {
+        document.myForm.submit();
+        document.myForm.reset();
+        }
+    </script> -->
+</body>
+</html>
