@@ -23,7 +23,7 @@ const handleAnswer = (event) => {
     displaySection.innerHTML = ''
     const displayDiv = document.createElement('div')
     
-    axios.post(`${baseURL}/api/quote/answer`)
+    axios.post(`/api/quote/answer`)
     .then(res =>{
         if (answerValue === res.data.movie){
             displaySection.appendChild(displayDiv)
@@ -51,7 +51,7 @@ const movieSearch = async (e) => {
         window.alert('well you gotta atleast try')
     }
    else  
-    axios.get(`${baseURL}/api/search?search=${searchVal}`)
+    axios.get(`/api/search?search=${searchVal}`)
     .then(res =>{
 
         const title = (res.data.movie)
@@ -67,7 +67,7 @@ const movieSearch = async (e) => {
 }
 
 document.addEventListener('DOMContentLoaded', function() {
-    axios.get(`${baseURL}/api/quote`)
+    axios.get(`/api/quote`)
     .then(res => {
         // console.log(res.data)
         elemP.innerHTML = `<h3>Can you guess this Quote?</h3>
@@ -83,7 +83,7 @@ randomBtn.addEventListener('click', function(event) {
     qotdInput.innerHTML = ''
     sectionInput.innerHTML = ''
     displaySection.innerHTML = ''
-    axios.get(`${baseURL}/api/random-quotes`)
+    axios.get(`/api/random-quotes`)
     .then(res => {
         const line = (res.data[0].movie)
         const line2 = (res.data[0].quote)
