@@ -20,7 +20,7 @@ app.get('/api/random-quotes', someQuotes)
 app.post('/api/quote/answer', quoteOfTheDay)
 app.get(`/api/search`, getQuotesByMovie)
 
-const SERVER_PORT = process.env.SERVER_PORT || 5050
+const SERVER_PORT = process.env.PORT || 5050
 
 
 app.listen(SERVER_PORT, () => {
