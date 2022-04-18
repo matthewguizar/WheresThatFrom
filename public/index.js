@@ -46,11 +46,11 @@ const handleAnswer = (event) => {
 
 const movieSearch = async (e) => {
     e.preventDefault()
+    qotdInput.innerHTML = ''
+    sectionInput.innerHTML = ''
+    displaySection.innerHTML = ''
     let searchVal = search.value
-    if (searchVal.value = ''){
-        window.alert('well you gotta atleast try')
-    }
-   else  
+   
     axios.get(`${baseURL}/api/search?search=${searchVal}`)
     .then(res =>{
 
@@ -70,8 +70,7 @@ document.addEventListener('DOMContentLoaded', function() {
     axios.get(`${baseURL}/api/quote`)
     .then(res => {
         // console.log(res.data)
-        elemP.innerHTML = `<h3>Can you guess this Quote?</h3>
-        <span>${res.data.quote}</span>`
+        elemP.innerHTML = `<h3 class='qotd-title'>Quote of the Day</h3><span class='quote-span'>${res.data.quote}</span>`
     
     })
     
@@ -87,10 +86,10 @@ randomBtn.addEventListener('click', function(event) {
     .then(res => {
         const line = (res.data[0].movie)
         const line2 = (res.data[0].quote)
-        elemP.innerHTML = `<h3 class="random">Quote:</h3>
-        <span>${line2}</span>
-        <h3>Title</h3>
-        <span>${line}</span>`
+        elemP.innerHTML = `
+        <div class="random">Quote:</div>
+        <span class='random-text'>${line2}</span>
+        <div class='random-title'>Title:</div><span>${line}</span>`
         
         
     })
