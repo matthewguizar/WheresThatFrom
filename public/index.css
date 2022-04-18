@@ -225,6 +225,8 @@ footer {
 
 .qotd-title{
     bottom: 76px;
+    font-size: larger;
+
 }
 
 .random{
@@ -241,4 +243,22 @@ footer {
 
 span {
     text-transform: capitalize;
+}
+
+
+.search-title{
+    position: relative;
+    bottom: 100px;
+    font-size:xx-small
+}
+
+.quote-1{
+    position: relative;
+    bottom: 150px;
+    font-size: larger;
+}
+
+.search-quote{
+    position: relative;
+    bottom:150px;
 }

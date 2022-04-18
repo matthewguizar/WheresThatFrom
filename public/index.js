@@ -58,9 +58,9 @@ const movieSearch = async (e) => {
         const quote = (res.data.quote)
       console.log(res.data)
         
-        elemP.innerHTML = `<h3>${title}</h3>
-        <h3>Quote 1:</h3> 
-        <span>${quote}</span>`
+        elemP.innerHTML = `<p class='search-title'> showing results from '${title}'</p>
+        <h3 class='quote-1'>Quote 1:</h3> 
+        <span class='search-quote'>${quote}</span>`
         
     })
     
