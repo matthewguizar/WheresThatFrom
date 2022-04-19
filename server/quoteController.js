@@ -12,7 +12,6 @@ module.exports = {
     someQuotes: (req, res) => {
         const data = movieQuote.getSomeRandom(1)
         console.log(data)
-        // console.log(data[1].quote)
         res.status(200).send(data)
         
         

@@ -11,9 +11,7 @@ const myForm = document.querySelector('#myForm')
 const myForms = document.querySelector('#myForms')
 const sectionInput = document.querySelector('#input')
 
-
-// const movieQuote = require('popular-movie-quotes');
-// const baseURL = 'http://localhost:5050'
+ 
 
 
 const handleAnswer = (event) => {
@@ -28,13 +26,11 @@ const handleAnswer = (event) => {
         if (answerValue === res.data.movie){
             displaySection.appendChild(displayDiv)
             console.log(`${answerValue} is CORRECT FOO`)
-            // window.alert(`${answerValue} is CORRECT FOO`)
            displayDiv.innerHTML = `${answerValue} is the right answer`
             
         } else{
             displaySection.appendChild(displayDiv)
             console.log(`NO, ITS FROM ${res.data.movie}`)
-            // window.alert(`${answerValue} is NOT CORRECT FOO`)
             displayDiv.innerHTML = `${answerValue} is not the right answer, feel free to keep trying`
             
         }
@@ -50,14 +46,14 @@ const movieSearch = async (e) => {
     sectionInput.innerHTML = ''
     displaySection.innerHTML = ''
     let searchVal = search.value
-   
+    
     axios.get(`/api/search?search=${searchVal}`)
     .then(res =>{
-
+        
         const title = (res.data.movie)
         const quote = (res.data.quote)
-      console.log(res.data)
         
+        search.innerHTML = ''
         elemP.innerHTML = `<p class='search-title'> showing results from '${title}'</p>
         <h3 class='quote-1'>Quote 1:</h3> 
         <span class='search-quote'>${quote}</span>`
@@ -69,7 +65,6 @@ const movieSearch = async (e) => {
 document.addEventListener('DOMContentLoaded', function() {
     axios.get(`/api/quote`)
     .then(res => {
-        // console.log(res.data)
         elemP.innerHTML = `<h3 class='qotd-title'>Quote of the Day</h3><span class='quote-span'>${res.data.quote}</span>`
     
     })

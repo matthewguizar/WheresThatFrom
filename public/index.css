@@ -59,7 +59,7 @@ margin:0;
     width: 130px;
     background-color: rgb(255, 196, 0);
     cursor: pointer;
-    /* margin-left: */
+
 }
 .submit-btn:hover{
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
@@ -156,8 +156,6 @@ margin:0;
 }
 
 div {
-    /* width: 200px; */
-    /* height: 10px; */
     position: relative;
     bottom: 45px;
     margin-left: 10px;
